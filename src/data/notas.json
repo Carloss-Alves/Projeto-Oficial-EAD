@@ -1,0 +1,77 @@
+[
+  {
+    "id": 1,
+    "titulo": "Nota Técnica 001",
+    "descricao": "Procedimentos Operacionais Padrão",
+    "conteudo": "<h2>Objetivo</h2><p>Esta nota técnica estabelece os procedimentos operacionais padrão a serem seguidos pela equipe no dia a dia das atividades.</p><h2>Diretrizes Gerais</h2><ul><li>Registrar toda ocorrência relevante no sistema.</li><li>Seguir a hierarquia de aprovação definida.</li><li>Comunicar desvios imediatamente ao responsável.</li></ul><h2>Fluxo de Aprovação</h2><table><thead><tr><th>Etapa</th><th>Responsável</th><th>Prazo</th></tr></thead><tbody><tr><td>Solicitação</td><td>Analista</td><td>1 dia</td></tr><tr><td>Análise</td><td>Supervisor</td><td>2 dias</td></tr><tr><td>Aprovação</td><td>Gerente</td><td>1 dia</td></tr></tbody></table><p>O não cumprimento dos prazos deve ser justificado formalmente.</p>",
+    "questoes": [
+      {
+        "pergunta": "Qual é o prazo definido para a etapa de análise?",
+        "alternativas": ["1 dia", "2 dias", "3 dias", "5 dias"],
+        "correta": 1,
+        "explicacao": "Segundo o fluxo de aprovação, a etapa de análise, sob responsabilidade do supervisor, deve ser concluída em 2 dias."
+      },
+      {
+        "pergunta": "O que deve ser feito em caso de desvio no procedimento?",
+        "alternativas": [
+          "Ignorar caso seja pequeno",
+          "Comunicar imediatamente ao responsável",
+          "Aguardar o fechamento do mês",
+          "Registrar apenas se solicitado"
+        ],
+        "correta": 1,
+        "explicacao": "As diretrizes gerais determinam que qualquer desvio deve ser comunicado imediatamente ao responsável."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "titulo": "Nota Técnica 002",
+    "descricao": "Segurança da Informação",
+    "conteudo": "<h2>Introdução</h2><p>Esta nota técnica orienta boas práticas de segurança da informação para todos os colaboradores.</p><h2>Boas Práticas</h2><ul><li>Utilizar senhas fortes e únicas.</li><li>Ativar autenticação em duas etapas sempre que disponível.</li><li>Nunca compartilhar credenciais de acesso.</li></ul><h2>Classificação da Informação</h2><p>As informações são classificadas em três níveis: pública, interna e confidencial. Documentos confidenciais exigem controle de acesso restrito.</p>",
+    "questoes": [
+      {
+        "pergunta": "Quantos níveis de classificação de informação são citados?",
+        "alternativas": ["Dois", "Três", "Quatro", "Cinco"],
+        "correta": 1,
+        "explicacao": "A nota técnica cita três níveis: pública, interna e confidencial."
+      },
+      {
+        "pergunta": "Qual prática é recomendada para o acesso a sistemas?",
+        "alternativas": [
+          "Compartilhar senha com a equipe",
+          "Usar a mesma senha em todos os sistemas",
+          "Ativar autenticação em duas etapas",
+          "Anotar a senha em local visível"
+        ],
+        "correta": 2,
+        "explicacao": "A ativação da autenticação em duas etapas é recomendada como boa prática de segurança sempre que disponível."
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "titulo": "Nota Técnica 003",
+    "descricao": "Atendimento ao Público",
+    "conteudo": "<h2>Objetivo</h2><p>Padronizar o atendimento ao público, garantindo cordialidade, clareza e eficiência.</p><h2>Princípios do Atendimento</h2><ul><li>Cordialidade em todo contato.</li><li>Clareza nas informações prestadas.</li><li>Registro de todo atendimento realizado.</li></ul><h2>Prazo de Resposta</h2><p>Solicitações devem ser respondidas em até 5 dias úteis, salvo exceções previamente informadas ao solicitante.</p>",
+    "questoes": [
+      {
+        "pergunta": "Qual é o prazo padrão de resposta a uma solicitação?",
+        "alternativas": ["1 dia útil", "3 dias úteis", "5 dias úteis", "10 dias úteis"],
+        "correta": 2,
+        "explicacao": "O prazo padrão estabelecido na nota técnica é de até 5 dias úteis."
+      },
+      {
+        "pergunta": "Quais são os princípios do atendimento citados?",
+        "alternativas": [
+          "Rapidez e informalidade",
+          "Cordialidade, clareza e registro",
+          "Silêncio e agilidade",
+          "Formalidade excessiva"
+        ],
+        "correta": 1,
+        "explicacao": "Os princípios citados são cordialidade em todo contato, clareza nas informações e registro do atendimento."
+      }
+    ]
+  }
+]

@@ -1,0 +1,213 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+/* ===================================================================
+   Design tokens — identidade "Dossiê Técnico"
+   Paleta institucional (azul profundo + selo dourado), tipografia
+   nativa com tratamento próprio, cartões com corte de canto (dossiê).
+   =================================================================== */
+@theme {
+  --color-primary-50: #eef3f8;
+  --color-primary-100: #d6e3ee;
+  --color-primary-400: #2c5282;
+  --color-primary-500: #1b3a5c;
+  --color-primary-600: #14304e;
+  --color-primary-700: #10263d;
+  --color-primary-900: #0a1a2b;
+
+  --color-accent-300: #e6c477;
+  --color-accent-400: #d9ad4e;
+  --color-accent-500: #c89a3e;
+  --color-accent-600: #a97e2e;
+
+  --color-success-400: #2fa876;
+  --color-success-500: #1f8a5f;
+  --color-success-600: #166b49;
+
+  --color-danger-400: #e5605a;
+  --color-danger-500: #cc4a44;
+
+  --color-ink-900: #0f1a24;
+  --color-ink-700: #1c2b38;
+  --color-ink-500: #4a5c6b;
+  --color-ink-300: #8393a1;
+
+  --font-display: "Avenir Next", "Segoe UI Semibold", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: #f5f6f8;
+  color: var(--color-ink-900);
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.dark body {
+  background-color: #0d1520;
+  color: #e7eaee;
+}
+
+/* Corte de canto — remete a um dossiê/documento oficial carimbado */
+.dossie-clip {
+  clip-path: polygon(0 0, calc(100% - 22px) 0, 100% 22px, 100% 100%, 0 100%);
+}
+
+/* Selo de conclusão */
+.selo-concluido {
+  box-shadow: 0 0 0 3px rgba(31, 138, 95, 0.15);
+}
+
+/* Conteúdo da Nota Técnica — tipografia de leitura */
+.conteudo-nt h2 {
+  color: var(--color-primary-500);
+  border-bottom: 1px solid rgba(27, 58, 92, 0.12);
+  padding-bottom: 0.4em;
+}
+.dark .conteudo-nt h2 {
+  color: var(--color-accent-300);
+  border-bottom-color: rgba(230, 196, 119, 0.18);
+}
+.conteudo-nt table {
+  overflow: hidden;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(15, 26, 36, 0.08);
+}
+.dark .conteudo-nt table {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+.conteudo-nt thead th {
+  background: var(--color-primary-50);
+  color: var(--color-primary-700);
+}
+.dark .conteudo-nt thead th {
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+}
+.conteudo-nt img {
+  border-radius: 0.75rem;
+  border: 1px solid rgba(15, 26, 36, 0.08);
+}
+.dark .conteudo-nt img {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+::selection {
+  background: var(--color-accent-300);
+  color: var(--color-primary-700);
+}
+
+/* Scrollbar discreta */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-ink-300);
+  border-radius: 999px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: var(--color-ink-500);
+}
+
+/* ===================================================================
+   Texto rico (perguntas, alternativas, explicações e editor do admin)
+   =================================================================== */
+.rte-content {
+  overflow-wrap: anywhere;
+  line-height: 1.6;
+}
+.rte-content p {
+  margin: 0 0 0.6em;
+}
+.rte-content p:last-child {
+  margin-bottom: 0;
+}
+.rte-content ul {
+  list-style: disc;
+  padding-left: 1.4em;
+  margin: 0.4em 0;
+}
+.rte-content ol {
+  list-style: decimal;
+  padding-left: 1.4em;
+  margin: 0.4em 0;
+}
+.rte-content h2,
+.rte-content h3,
+.rte-content h4 {
+  font-weight: 600;
+  margin: 0.6em 0 0.3em;
+}
+.rte-content blockquote {
+  border-left: 3px solid var(--color-accent-500);
+  padding-left: 0.9em;
+  margin: 0.6em 0;
+  color: var(--color-ink-500);
+}
+.dark .rte-content blockquote {
+  color: var(--color-ink-300);
+}
+.rte-content a {
+  color: var(--color-primary-400);
+  text-decoration: underline;
+}
+.dark .rte-content a {
+  color: var(--color-accent-300);
+}
+.rte-content table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0.6em 0;
+}
+.rte-content td,
+.rte-content th {
+  border: 1px solid rgba(15, 26, 36, 0.15);
+  padding: 0.35em 0.6em;
+}
+.dark .rte-content td,
+.dark .rte-content th {
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+/* Editor: células de tabela e listas visíveis enquanto edita */
+.rte-editavel table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.rte-editavel td,
+.rte-editavel th {
+  min-width: 3rem;
+  outline: 1px dashed rgba(128, 128, 128, 0.35);
+  outline-offset: -1px;
+}
+.rte-editavel ul {
+  list-style: disc;
+}
+.rte-editavel ol {
+  list-style: decimal;
+}
+
+/* Imagens dentro do texto */
+.rte-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(15, 26, 36, 0.08);
+  margin: 0.6em 0;
+}
+.dark .rte-content img {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+.rte-editavel img {
+  cursor: pointer;
+}
